@@ -1,0 +1,68 @@
+#include <LiquidCrystal.h> // LIBRERIA
+
+int rs = 12;
+int e = 11;
+int d7 = 2;
+int d6 = 3;
+int d5 = 4;
+int d4 = 5;
+int pulsador = 7;
+int pulsador2 = 8;
+int in1 = 9;
+int in2 = 10;
+int estado1;
+int estado2;
+int velocidad = 255;
+
+LiquidCrystal lcd (rs, e ,d4, d5, d6, d7);
+ void setup () {
+   lcd.begin(16,2);
+   pinMode(pulsador, INPUT);
+   pinMode(pulsador, INPUT);
+   pinMode(in1, OUTPUT);
+   pinMode(in2, OUTPUT);
+ }
+
+ void loop() {
+      
+  estado1 = digitalRead(pull1);
+  estado2 = digitalRead(pull2);
+
+
+  
+
+  if(estado1 == HIGH){
+      analogWrite(in1,0);
+      analogWrite(in2,velocidad);
+      lcd.clear();
+      lcd.print("MOTOR ON");
+      delay(500);
+  }else{
+     analogWrite(in1, 0),
+      analogWrite(in2,0);
+      lcd.clear();
+      lcd.print("MOTOR OFF");
+      delay(500);
+  }
+
+  if(estado2 == HIGH){
+      analogWrite(in1, velocidad),
+      analogWrite(in2,0);
+      lcd.clear();
+      lcd.print("MOTOR ON");
+      delay(500);
+  } else{
+     analogWrite(in1, 0),
+      analogWrite(in2,0);
+      lcd.clear();
+      lcd.print("MOTOR OFF");
+      delay(500);
+  }
+
+  
+
+
+
+ }
+
+
