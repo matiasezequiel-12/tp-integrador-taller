@@ -95,29 +95,6 @@ h2 {
     font-size: 16px;
 }
 
-
-
-table {
-    width: 100%;
-}
-
-th {
-    color: #DFDDE0;
-}
-
-td {
-    color: #DFDDE0;
-}
-
-.borrar {
-    background-color: #e45d34;
-    border-radius: 50%;
-    padding: 5px 10px;
-    text-decoration: none;
-    color: #DFDDE0;
-    font-weight: 800;
-}
-
 .header-content {
     position: relative;
     text-align: center;
@@ -132,7 +109,7 @@ td {
 }
 
 .header-content p {
-    font-size: 10px;
+    font-size: 15px;
     padding: 0 200px;
     color: #8b7e7b;
     margin-bottom: 80px;
@@ -157,25 +134,7 @@ td {
     background-color: #c23b11;
 }
 
-.socials-1 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-}
 
-.socials-1 img {
-    width: 35px;
-    height: 35px;
-    margin-bottom: 30px;
-}
-
-.arrow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 150px;
-}
 
 .recetas {
     display: flex;
@@ -212,7 +171,7 @@ td {
 }
 
 .platillos {
-    padding: 50px 0;
+    padding: 0px 0;
 }
 
 .swiper {
@@ -247,7 +206,7 @@ td {
 }
 
 .swiper-button-next {
-   color: #e45d34;
+    color: #e45d34;
 }
 
 .swiper-pagination-bullet {
@@ -331,31 +290,8 @@ td {
     background-color: #252326;
 }
 
-table {
-    margin: 50px 0;
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
-}
-
-tr {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #afafaf;
-    margin-bottom: 20px;
-}
-
-th {
-    color: #FFFFFF;
-    padding-bottom: 15px;
-}
-
-td {
-    color: #cf2d3a;
-}
-
 .precios-2 {
-    background-image: url(barberimages/a2.jpg);
+    background-image: url();
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -516,7 +452,4 @@ td {
     .socials-2 {
         margin-bottom: 15px;
     }
-
-
-
 }
