@@ -233,8 +233,129 @@
                 <source src="Video de WhatsApp 2023-12-12 a las 14.20.51_c5613120.mp4">
             </video>
         </div>
-
     </section>
+
+    <section class="recetas container">
+        <div class="recetas-2">
+            <h2>IMAGENES <br> DEL <br> PROYECTO</h2>
+        </div>
+        <div class="recetas-1">
+            <h3>IMAGENES OBTENIDAS DURANTE EL PROCESO DE ARMADO</h3>
+            <hr>
+            <p>
+                IMAGENES CAPTADAS EN EL ARMADO DEL PROYECTO DONDE SE UTILIZARON UN PROTOBOARD DONDE SE COLOCARON LOS PULSADORES, EL DISPLAY LCD, 
+                EL POTENCIOMETRO. LUEGO EL ARDUINO QUE PERMITE LA FUNCIONALIDAD DEL PROYECTO Y ADEMÁS EL MODULO PUENTE H QUE PERMITE EL MOVIMIENTO 
+                DE LA RUEDA. SE UTILIZARON 2 BATERIAS DE 3,7V PARA ALIMENTAR LA CORRIENTE.
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="platillos container" id="lista-2">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="platillo">
+                        <img src="images/muestra1.jpg" alt="" width="100" height="150">
+                        <a class="agregar-carrito btn-3">MUESTRA 1</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="platillo">
+                        <img src="images/muestra2.jpg" alt="" width="100" height="150">
+                        <a class="agregar-carrito btn-3">MUESTRA 2</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="platillo">
+                        <img src="images/muestra3.jpg" alt="" width="100" height="150">
+                        <a class="agregar-carrito btn-3">MUESTRA 3</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="platillo">
+                        <img src="images/muestra4.jpg" alt="" width="100" height="150" >
+                        <a class="agregar-carrito btn-3">MUESTRA 4</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <header class="header">
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>CODIGO DEL ARDUINO</h1>
+                <p>#include LiquidCrystal.h <br><br>
+
+                    int rs = 12; <br>
+                    int e = 11; <br>
+                    int d7 = 2; <br>
+                    int d6 = 3; <br>
+                    int d5 = 4; <br>
+                    int d4 = 5; <br>
+                    int pulsador = 7;   <br>
+                    int pulsador2 = 8;  <br>
+                    int in1 = 9;    <br>
+                    int in2 = 10;   <br>
+                    int estado1;    <br>
+                    int estado2;    <br>
+                    int velocidad = 255;    <br>
+                    LiquidCrystal lcd (rs, e ,d4, d5, d6, d7);  <br><br>
+
+                    void setup () { <br>
+                        lcd.begin(16,2);    <br>
+                        pinMode(pulsador, INPUT);   <br>
+                        pinMode(pulsador, INPUT);   <br>
+                        pinMode(in1, OUTPUT);   <br>
+                        pinMode(in2, OUTPUT);   <br>
+                    }   <br><br>
+                    
+                    void loop() {   <br>
+                        estado1 = digitalRead(pull1);   <br>
+                        estado2 = digitalRead(pull2);   <br><br>
+                    
+                        if(estado1 == HIGH){    <br>
+                            analogWrite(in1,0); <br>
+                            analogWrite(in2,velocidad); <br>
+                            lcd.clear();    <br>
+                            lcd.print("MOTOR ON");  <br>
+                            delay(500); <br>
+                        }else{  <br>
+                            analogWrite(in1, 0);    <br>
+                            analogWrite(in2,0); <br>
+                            lcd.clear();    <br>
+                            lcd.print("MOTOR OFF"); <br>
+                            delay(500); <br>
+                        }   <br><br>
+                    
+                        if(estado2 == HIGH){    <br>
+                            analogWrite(in1, velocidad),    <br>
+                            analogWrite(in2,0); <br>
+                            lcd.clear();    <br>
+                            lcd.print("MOTOR ON");  <br>
+                            delay(500); <br>
+                        } else{ <br>
+                            analogWrite(in1, 0),    <br>
+                            analogWrite(in2,0); <br>
+                            lcd.clear();    <br>
+                            lcd.print("MOTOR OFF"); <br>
+                            delay(500); <br>
+                        }   <br>  
+                    } <br>
+                </p>
+            </div>
+        </div>
+    </header>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
